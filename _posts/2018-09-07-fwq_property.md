@@ -100,7 +100,7 @@ console.log(book.year + "||" + book.edition); //输出2019 || 1
 ##读取属性的特性（这里才想起来，叫做属性的特性应该更合适）
 &emsp;&emsp;很简单，只要使用ECMAScript5的Object.getOwnPropertyDescriptor()方法即可。
 ```
-**var descriptor = Object.getOwnPropertyDescriptor("book","_year");**
+var descriptor = Object.getOwnPropertyDescriptor("book","_year");
 console.log(descriptor.value + "||" + descriptor.configurable);
 //2018||false
 ```
