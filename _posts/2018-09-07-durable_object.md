@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Javascript中的控制属性的行为方式/数据属性&访问器属性
+title: Javascript稳妥构造函数模式
 date: 2018-09-07
 tag: Javascript
 ---
