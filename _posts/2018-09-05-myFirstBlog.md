@@ -14,7 +14,7 @@ tag: 生活
 &nbsp;&nbsp;&nbsp;最后，欢迎大家来到我的博客，并为我的博客上涉及到的各个方面提出宝贵意见，谢谢大家！
 
 
-&nbsp;&nbsp;&nbsp; ![avatar](../images/avatar.jpg)
+&nbsp;&nbsp;&nbsp; ![Markdown](http://i2.bvimg.com/661106/2ddc404c1437de15.jpg)
 
 
 
