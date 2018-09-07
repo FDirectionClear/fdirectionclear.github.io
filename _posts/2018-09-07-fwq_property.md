@@ -97,7 +97,7 @@ console.log(book.year + "||" + book.edition); //输出2019 || 1
 面会加一个下划线），成为了一个新的访问器属性。在这个访问器属性中，我们更改了新的edition，同时更
 改了_year。如果不这样做，我们就需要一个新的单独的函数来更新edition._year。）
 
-##读取属性的特性（这里才想起来，叫做属性的特性应该更合适）
+## 读取属性的特性（这里才想起来，叫做属性的特性应该更合适）
 &emsp;&emsp;很简单，只要使用ECMAScript5的Object.getOwnPropertyDescriptor()方法即可。
 ```
 var descriptor = Object.getOwnPropertyDescriptor("book","_year");
