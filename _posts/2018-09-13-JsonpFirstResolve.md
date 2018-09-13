@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Javascript稳妥构造函数模式
+title: 关于Jsonp的一些学习总结
 date: 2018-09-07
 tag: Javascript
 ---
