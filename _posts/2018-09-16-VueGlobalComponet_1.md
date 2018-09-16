@@ -88,9 +88,20 @@ tag: Vue.js
    
 ``` 
 &nbsp;&nbsp;## **<font color="#dd0000">全局组件的声明必须要在Vue实例被初始化之前</font>**  
-&nbsp;&nbsp这是让我曾犯下的令人羞愧的错误...如果在Vue实例初始化之后解析，Vue会抛出错误。这正是因为当Vue执行的时候DOM元素必定已经被解释器解释  
-完成，待Vue开始实例化的时候，又回去重新渲染DOM。就算全局组件在实例化之后被声明，Vue也不会回头重新渲染DOM。因此会抛出一个不能识别组件元素的错  
-误。毕竟在没有触发条件的时候，Javascript本质是不会回头的。
+&nbsp;&nbsp;这是让我曾犯下的令人羞愧的错误...如果在Vue实例初始化之后解析，Vue会抛出错误。这正是因为当Vue执行的时候DOM元素必定已经被解释器  
+解释完成，待Vue开始实例化的时候，又回去重新渲染DOM。就算全局组件在实例化之后被声明，Vue也不会回头重新渲染DOM。因此会抛出一个不能识别组件  
+元素的错误。毕竟在没有触发条件的时候，Javascript本质是不会回头的。
+&nbsp;&nbsp;## **<font color="#dd0000">在Vue2.0中，组件的内容必须由一个root元素进行包裹才可以使用。即使是在方式三的模板中也是如此。</font>** 
+```
+ <template id = "model-1"> <!--模板内容不会显示在视图中-->
+      <span><a href="#" @click = "welcome">登陆</a> | <a href="#">注册</a></span> <!--注意需要一个root元素！root元素！-->
+  </template>
+
+  <script type = "x-template" id = "model-2"> <!--模板内容不会显示在视图中-->
+      <span><a href="#" @click = "welcome">登陆2</a> | <a href="#">注册2</a></span> <!--同样需要一个root元素，但是在script标签中代码不会高亮-->
+  </script>
+```
+
 
 
 
