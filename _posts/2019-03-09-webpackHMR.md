@@ -1,3 +1,10 @@
+---
+layout: post
+title: 博客便捷测试
+date: 2019-03-09 
+tag: webpack
+---
+
 当我们打包一些非js模块的时候，比如jpg，png我们就需要去调查一下打包此类文件需要什么loader。
 
 查阅方式为，进入官方文档，
