@@ -1,0 +1,43 @@
+---
+layout: post
+title: 博客便捷测试
+date: 2019-03-09 
+tag: webpack
+---
+
+Webpack相关热模块更新（HMR）1
+=============================
+
+Webpack-dev-server虽然能在本地起一个服务器，还能帮助我们自动打开浏览器刷新页面，但是却还是得刷新，及时这个过程是自动的，但是如果我们编写的是一些动态代码，比如需要触发事件添加样式。那么每一次刷新就会使之前触发事件后的样式消失，需要重新触发样式。
+
+现在我们有更方便的方式，浏览器连刷新都不刷新，直接在现有页面的基础上修改页面渲染。
+
+比较简单，引用并使用一个webpack自带的插件，并且为devServer增加属性hot属性，配置成true即可。
+
+![1.png](https://i.loli.net/2019/03/09/5c8343f182dfb.png)
+
+配置hot与hotOnly之后引入webpack。就是为了使用webpack自带的Webpack.HotModuleReplacementPlugin()插件。
+
+之后重启webpack-dev-server（需要重启服务器才能应用新的webpack配置项）
+
+再次运行npm run start，自动打开浏览器就是HMR模式了。
+
+下面是例子：
+
+![2.png](https://i.loli.net/2019/03/09/5c8343f19b87a.png)
+
+Css：
+
+![3.png](https://i.loli.net/2019/03/09/5c8343f19b87e.png)
+
+![5.png](https://i.loli.net/2019/03/09/5c8343f182e5a.png)
+
+改变css，修改背景颜色。
+
+![6.png](https://i.loli.net/2019/03/09/5c8343f16b07c.png)
+
+然后直接修改代码，注意不刷新浏览器也！不需要对浏览器做出任何操作。
+
+![7.png](https://i.loli.net/2019/03/09/5c8343f185198.png)
+
+可以发现背景颜色自动的改变了，而且浏览器没有执行任何刷新操作！
