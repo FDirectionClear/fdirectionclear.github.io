@@ -18,11 +18,11 @@ clean-html-plugin。
 
 ### 二、file-loader Vs url-loader 
 
-![](images/posts/2019-04-12-webpack-file&url-loader/e0e973f2c64416b1eee247d6d3dec3ea.png)
+![](/images/posts/2019-04-12-webpack-file&url-loader/e0e973f2c64416b1eee247d6d3dec3ea.png)
 
-![](images/posts/2019-04-12-webpack-file&url-loader/f4e93d70de351248609c217a5d6d22fa.png)
+![](/images/posts/2019-04-12-webpack-file&url-loader/f4e93d70de351248609c217a5d6d22fa.png)
 
-![](images/posts/2019-04-12-webpack-file&url-loader/fd68f273cfd0360525d8483a8ee89736.png)
+![](/images/posts/2019-04-12-webpack-file&url-loader/fd68f273cfd0360525d8483a8ee89736.png)
 
 file-loader会打包图片，打包后返回的是图片的名称（打包后的图片就会‘复制’一份到生产环境下，只不过文件可能是经过webpack处理过的，而且名字也是通过webpack配置文件中配置的，事实上这个经过打包过后，出现在生产环境下的图片和原来的图片就是不同的图片）。
 
@@ -39,23 +39,23 @@ file-loader会打包图片，打包后返回的是图片的名称（打包后的
 
 返回base64的样子（图片大小714kb）
 
-![](images/posts/2019-04-12-webpack-file&url-loader/f74891560f34d46373bdc6fe19431860.png)
+![](/images/posts/2019-04-12-webpack-file&url-loader/f74891560f34d46373bdc6fe19431860.png)
 
-![](images/posts/2019-04-12-webpack-file&url-loader/d8fce7238cb103daf96df4c45b9560d0.png)
+![](/images/posts/2019-04-12-webpack-file&url-loader/d8fce7238cb103daf96df4c45b9560d0.png)
 
 返回图片名称的样子
 
-![](images/posts/2019-04-12-webpack-file&url-loader/2fc5e90fb2fda34e8527d154d7863884.png)
+![](/images/posts/2019-04-12-webpack-file&url-loader/2fc5e90fb2fda34e8527d154d7863884.png)
 
 ### 三、补充说明
 
 在.vue文件中，或者说在任何webpack的开发环境下，我们引入图片都应该按照以下方式：
 
-![](images/posts/2019-04-12-webpack-file&url-loader/6cd6f04f644e1482c66a4981164cbfa7.png)
+![](/images/posts/2019-04-12-webpack-file&url-loader/6cd6f04f644e1482c66a4981164cbfa7.png)
 
 而不应该是：
 
-![](images/posts/2019-04-12-webpack-file&url-loader/2de62754327df86851a010751176c9ef.png)
+![](/images/posts/2019-04-12-webpack-file&url-loader/2de62754327df86851a010751176c9ef.png)
 
 最常见的一个错误就是在开发环境下直接引入相对路径的静态资源。这样在绝大多数情况下都会失败，**因为webpack打包后的文件是在开发环境下，生产环境下对静态资源的引用相对路径很可能和开发环境不同！**
 
