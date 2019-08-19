@@ -1,6 +1,6 @@
 ---
 layout: post
-title: html-webpack-plugin和clean-webpack-plugin的使用和入坑小记
+title: webpack-code-splitting
 date: 2019-06-15 
 tag: webpack
 ---
