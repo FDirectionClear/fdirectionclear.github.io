@@ -1,5 +1,9 @@
-Webpack CSS代码分割
-===================
+---
+layout: post
+title: Webpack CSS代码分割
+date: 2019-06-15 
+tag: webpack
+---
 
 ### output.chunkFilename和filename和vendors.name以及魔法注释webpackChunkName的区别
 
